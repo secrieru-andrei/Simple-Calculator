@@ -1,24 +1,279 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a0S-LA-xme">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Jost-VariableFont_wght.ttf">
+            <string>Jost-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Calculator-->
+        <scene sceneID="dr1-vA-AL7">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <navigationController title="Calculator" id="a0S-LA-xme" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MkM-mR-ebO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="odv-f9-NU6" kind="relationship" relationship="rootViewController" id="aHG-ri-n3e"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yey-Pf-dyR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-1030" y="33"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="EDU-Gk-sbA">
+            <objects>
+                <viewController id="odv-f9-NU6" customClass="ViewController" customModule="Simple_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2H1-kI-dkf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KW1-zh-XqQ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F10-ut-HXj">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="271"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrw-ko-Hg9">
+                                                <rect key="frame" x="8" y="158.5" width="398" height="104.5"/>
+                                                <fontDescription key="fontDescription" name="Jost-Regular" family="Jost" pointSize="72"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 + 10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Gu-qd-Q9v">
+                                                <rect key="frame" x="8" y="130" width="398" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="lrw-ko-Hg9" secondAttribute="bottom" constant="8" id="0Bl-Zk-WoA"/>
+                                            <constraint firstItem="1Gu-qd-Q9v" firstAttribute="leading" secondItem="F10-ut-HXj" secondAttribute="leading" constant="8" id="ICX-e3-2sK"/>
+                                            <constraint firstAttribute="trailing" secondItem="1Gu-qd-Q9v" secondAttribute="trailing" constant="8" id="K3t-cq-dFs"/>
+                                            <constraint firstItem="lrw-ko-Hg9" firstAttribute="leading" secondItem="F10-ut-HXj" secondAttribute="leading" constant="8" id="QyV-qM-h3m"/>
+                                            <constraint firstItem="lrw-ko-Hg9" firstAttribute="top" secondItem="1Gu-qd-Q9v" secondAttribute="bottom" constant="8" id="Sae-k6-uXl"/>
+                                            <constraint firstAttribute="trailing" secondItem="lrw-ko-Hg9" secondAttribute="trailing" constant="8" id="hsR-fh-lTn"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XrW-vF-3D5">
+                                        <rect key="frame" x="0.0" y="271" width="414" height="503"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="51P-kF-35N">
+                                                <rect key="frame" x="18" y="18" width="378" height="475"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="jRz-qH-7q3">
+                                                        <rect key="frame" x="0.0" y="0.0" width="378" height="80.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBn-Tc-ntC">
+                                                                <rect key="frame" x="0.0" y="0.0" width="81" height="80.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="AC" cornerStyle="large">
+                                                                    <fontDescription key="titleFontDescription" name="Jost-Regular" family="Jost" pointSize="24"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sm0-AQ-fXz">
+                                                                <rect key="frame" x="99" y="0.0" width="81" height="80.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="±" cornerStyle="large">
+                                                                    <fontDescription key="titleFontDescription" name="Jost-Regular" family="Jost" pointSize="24"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mV0-RG-3eG">
+                                                                <rect key="frame" x="198" y="0.0" width="81" height="80.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="%" cornerStyle="large">
+                                                                    <fontDescription key="titleFontDescription" name="Jost-Regular" family="Jost" pointSize="24"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JtX-E6-bRx">
+                                                                <rect key="frame" x="297" y="0.0" width="81" height="80.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="/" cornerStyle="large">
+                                                                    <fontDescription key="titleFontDescription" name="Jost-Regular" family="Jost" pointSize="24"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="eM4-SU-9n7">
+                                                        <rect key="frame" x="0.0" y="98.5" width="378" height="80.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMG-hl-0Mi">
+                                                                <rect key="frame" x="0.0" y="0.0" width="81" height="80.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="7" cornerStyle="large">
+                                                                    <fontDescription key="titleFontDescription" name="Jost-Regular" family="Jost" pointSize="24"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcN-Qt-pfd">
+                                                                <rect key="frame" x="99" y="0.0" width="81" height="80.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="8" cornerStyle="large">
+                                                                    <fontDescription key="titleFontDescription" name="Jost-Regular" family="Jost" pointSize="24"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lkd-jT-ZeS">
+                                                                <rect key="frame" x="198" y="0.0" width="81" height="80.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="9" cornerStyle="large">
+                                                                    <fontDescription key="titleFontDescription" name="Jost-Regular" family="Jost" pointSize="24"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyA-Kv-9Un">
+                                                                <rect key="frame" x="297" y="0.0" width="81" height="80.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="X" cornerStyle="large">
+                                                                    <fontDescription key="titleFontDescription" name="Jost-Regular" family="Jost" pointSize="24"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="eVh-Vb-pT8">
+                                                        <rect key="frame" x="0.0" y="197" width="378" height="81"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vef-MT-uG4">
+                                                                <rect key="frame" x="0.0" y="0.0" width="81" height="81"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="4" cornerStyle="large">
+                                                                    <fontDescription key="titleFontDescription" name="Jost-Regular" family="Jost" pointSize="24"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyc-49-3qR">
+                                                                <rect key="frame" x="99" y="0.0" width="81" height="81"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="5" cornerStyle="large">
+                                                                    <fontDescription key="titleFontDescription" name="Jost-Regular" family="Jost" pointSize="24"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GPt-6r-LGI">
+                                                                <rect key="frame" x="198" y="0.0" width="81" height="81"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="6" cornerStyle="large">
+                                                                    <fontDescription key="titleFontDescription" name="Jost-Regular" family="Jost" pointSize="24"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dd3-6e-itp">
+                                                                <rect key="frame" x="297" y="0.0" width="81" height="81"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="-" cornerStyle="large">
+                                                                    <fontDescription key="titleFontDescription" name="Jost-Regular" family="Jost" pointSize="24"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="f7E-sM-gUE">
+                                                        <rect key="frame" x="0.0" y="296" width="378" height="80.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfG-79-r0U">
+                                                                <rect key="frame" x="0.0" y="0.0" width="81" height="80.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="1" cornerStyle="large">
+                                                                    <fontDescription key="titleFontDescription" name="Jost-Regular" family="Jost" pointSize="24"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deC-iO-mUs">
+                                                                <rect key="frame" x="99" y="0.0" width="81" height="80.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="2" cornerStyle="large">
+                                                                    <fontDescription key="titleFontDescription" name="Jost-Regular" family="Jost" pointSize="24"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iky-Sc-GsI">
+                                                                <rect key="frame" x="198" y="0.0" width="81" height="80.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="3" cornerStyle="large">
+                                                                    <fontDescription key="titleFontDescription" name="Jost-Regular" family="Jost" pointSize="24"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKg-ai-d4J">
+                                                                <rect key="frame" x="297" y="0.0" width="81" height="80.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="+" cornerStyle="large">
+                                                                    <fontDescription key="titleFontDescription" name="Jost-Regular" family="Jost" pointSize="24"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="mCk-ed-JmQ">
+                                                        <rect key="frame" x="0.0" y="394.5" width="378" height="80.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXG-NV-M38">
+                                                                <rect key="frame" x="0.0" y="0.0" width="179" height="80.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="0" cornerStyle="large">
+                                                                    <fontDescription key="titleFontDescription" name="Jost-Regular" family="Jost" pointSize="24"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yr2-yV-WnN">
+                                                                <rect key="frame" x="197" y="0.0" width="81.5" height="80.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="." cornerStyle="large">
+                                                                    <fontDescription key="titleFontDescription" name="Jost-Regular" family="Jost" pointSize="24"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KcO-XS-53j">
+                                                                <rect key="frame" x="296.5" y="0.0" width="81.5" height="80.5"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="=" cornerStyle="large">
+                                                                    <fontDescription key="titleFontDescription" name="Jost-Regular" family="Jost" pointSize="24"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="Yr2-yV-WnN" firstAttribute="width" secondItem="KcO-XS-53j" secondAttribute="width" id="ZwT-jL-8fT"/>
+                                                            <constraint firstItem="SXG-NV-M38" firstAttribute="width" secondItem="Yr2-yV-WnN" secondAttribute="width" multiplier="2.2" id="lEz-Dn-ntW"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="51P-kF-35N" secondAttribute="trailing" constant="18" id="Ak6-LO-gKj"/>
+                                            <constraint firstItem="51P-kF-35N" firstAttribute="leading" secondItem="XrW-vF-3D5" secondAttribute="leading" constant="18" id="fBw-Sl-gYl"/>
+                                            <constraint firstItem="51P-kF-35N" firstAttribute="top" secondItem="XrW-vF-3D5" secondAttribute="top" constant="18" id="jsc-1m-MRf"/>
+                                            <constraint firstAttribute="bottom" secondItem="51P-kF-35N" secondAttribute="bottom" constant="10" id="tFO-H9-cP7"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1356665906" green="0.86096045509999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="XrW-vF-3D5" firstAttribute="height" secondItem="KW1-zh-XqQ" secondAttribute="height" multiplier="0.65" id="M89-aX-XYx"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DYc-cq-1LG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KW1-zh-XqQ" firstAttribute="leading" secondItem="DYc-cq-1LG" secondAttribute="leading" id="DUl-4R-Adc"/>
+                            <constraint firstItem="KW1-zh-XqQ" firstAttribute="trailing" secondItem="DYc-cq-1LG" secondAttribute="trailing" id="dtP-qI-eiq"/>
+                            <constraint firstItem="KW1-zh-XqQ" firstAttribute="bottom" secondItem="DYc-cq-1LG" secondAttribute="bottom" id="nix-wN-pPU"/>
+                            <constraint firstItem="KW1-zh-XqQ" firstAttribute="top" secondItem="DYc-cq-1LG" secondAttribute="top" id="w89-I2-9fR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="uGc-0E-OnS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TYk-mq-hsN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4.3478260869565224" y="32.8125"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
