@@ -20,6 +20,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MkM-mR-ebO">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Jost-Regular" family="Jost" pointSize="20"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="odv-f9-NU6" kind="relationship" relationship="rootViewController" id="aHG-ri-n3e"/>
@@ -56,14 +59,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="lrw-ko-Hg9" secondAttribute="bottom" constant="8" id="0Bl-Zk-WoA"/>
                                             <constraint firstItem="1Gu-qd-Q9v" firstAttribute="leading" secondItem="F10-ut-HXj" secondAttribute="leading" constant="8" id="ICX-e3-2sK"/>
                                             <constraint firstAttribute="trailing" secondItem="1Gu-qd-Q9v" secondAttribute="trailing" constant="8" id="K3t-cq-dFs"/>
                                             <constraint firstItem="lrw-ko-Hg9" firstAttribute="leading" secondItem="F10-ut-HXj" secondAttribute="leading" constant="8" id="QyV-qM-h3m"/>
-                                            <constraint firstItem="lrw-ko-Hg9" firstAttribute="top" secondItem="1Gu-qd-Q9v" secondAttribute="bottom" constant="8" id="Sae-k6-uXl"/>
                                             <constraint firstAttribute="trailing" secondItem="lrw-ko-Hg9" secondAttribute="trailing" constant="8" id="hsR-fh-lTn"/>
+                                            <constraint firstAttribute="bottom" secondItem="1Gu-qd-Q9v" secondAttribute="bottom" constant="120.5" id="nZf-NZ-X0t"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XrW-vF-3D5">
@@ -75,132 +77,181 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="jRz-qH-7q3">
                                                         <rect key="frame" x="0.0" y="0.0" width="378" height="80.5"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBn-Tc-ntC">
+                                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBn-Tc-ntC">
                                                                 <rect key="frame" x="0.0" y="0.0" width="81" height="80.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="filled" title="AC" cornerStyle="large">
                                                                     <fontDescription key="titleFontDescription" name="Jost-Regular" family="Jost" pointSize="24"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="operationButtons:" destination="odv-f9-NU6" eventType="touchUpInside" id="9MV-0y-m95"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sm0-AQ-fXz">
+                                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sm0-AQ-fXz">
                                                                 <rect key="frame" x="99" y="0.0" width="81" height="80.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="filled" title="±" cornerStyle="large">
                                                                     <fontDescription key="titleFontDescription" name="Jost-Regular" family="Jost" pointSize="24"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="operationButtons:" destination="odv-f9-NU6" eventType="touchUpInside" id="cDh-a6-LW6"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mV0-RG-3eG">
+                                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mV0-RG-3eG">
                                                                 <rect key="frame" x="198" y="0.0" width="81" height="80.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="filled" title="%" cornerStyle="large">
                                                                     <fontDescription key="titleFontDescription" name="Jost-Regular" family="Jost" pointSize="24"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="operationButtons:" destination="odv-f9-NU6" eventType="touchUpInside" id="IC7-vy-pZc"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JtX-E6-bRx">
+                                                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JtX-E6-bRx">
                                                                 <rect key="frame" x="297" y="0.0" width="81" height="80.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="filled" title="/" cornerStyle="large">
+                                                                    <backgroundConfiguration key="background"/>
                                                                     <fontDescription key="titleFontDescription" name="Jost-Regular" family="Jost" pointSize="24"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="operationButtons:" destination="odv-f9-NU6" eventType="touchUpInside" id="t3K-Ud-Yzk"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="eM4-SU-9n7">
                                                         <rect key="frame" x="0.0" y="98.5" width="378" height="80.5"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMG-hl-0Mi">
+                                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMG-hl-0Mi">
                                                                 <rect key="frame" x="0.0" y="0.0" width="81" height="80.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="filled" title="7" cornerStyle="large">
                                                                     <fontDescription key="titleFontDescription" name="Jost-Regular" family="Jost" pointSize="24"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="buttonPressed:" destination="odv-f9-NU6" eventType="touchUpInside" id="OUK-yJ-3D4"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcN-Qt-pfd">
+                                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcN-Qt-pfd">
                                                                 <rect key="frame" x="99" y="0.0" width="81" height="80.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="filled" title="8" cornerStyle="large">
                                                                     <fontDescription key="titleFontDescription" name="Jost-Regular" family="Jost" pointSize="24"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="buttonPressed:" destination="odv-f9-NU6" eventType="touchUpInside" id="s1U-dP-nyf"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lkd-jT-ZeS">
+                                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lkd-jT-ZeS">
                                                                 <rect key="frame" x="198" y="0.0" width="81" height="80.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="filled" title="9" cornerStyle="large">
                                                                     <fontDescription key="titleFontDescription" name="Jost-Regular" family="Jost" pointSize="24"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="buttonPressed:" destination="odv-f9-NU6" eventType="touchUpInside" id="NlS-kd-a0x"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyA-Kv-9Un">
+                                                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyA-Kv-9Un">
                                                                 <rect key="frame" x="297" y="0.0" width="81" height="80.5"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="filled" title="X" cornerStyle="large">
+                                                                <buttonConfiguration key="configuration" style="filled" title="x" cornerStyle="large">
                                                                     <fontDescription key="titleFontDescription" name="Jost-Regular" family="Jost" pointSize="24"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="operationButtons:" destination="odv-f9-NU6" eventType="touchUpInside" id="Fct-Kk-0el"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="eVh-Vb-pT8">
                                                         <rect key="frame" x="0.0" y="197" width="378" height="81"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vef-MT-uG4">
+                                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vef-MT-uG4">
                                                                 <rect key="frame" x="0.0" y="0.0" width="81" height="81"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="filled" title="4" cornerStyle="large">
                                                                     <fontDescription key="titleFontDescription" name="Jost-Regular" family="Jost" pointSize="24"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="buttonPressed:" destination="odv-f9-NU6" eventType="touchUpInside" id="DAO-S0-PRb"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyc-49-3qR">
+                                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyc-49-3qR">
                                                                 <rect key="frame" x="99" y="0.0" width="81" height="81"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="filled" title="5" cornerStyle="large">
                                                                     <fontDescription key="titleFontDescription" name="Jost-Regular" family="Jost" pointSize="24"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="buttonPressed:" destination="odv-f9-NU6" eventType="touchUpInside" id="fPY-Ki-kFc"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GPt-6r-LGI">
+                                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GPt-6r-LGI">
                                                                 <rect key="frame" x="198" y="0.0" width="81" height="81"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="filled" title="6" cornerStyle="large">
                                                                     <fontDescription key="titleFontDescription" name="Jost-Regular" family="Jost" pointSize="24"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="buttonPressed:" destination="odv-f9-NU6" eventType="touchUpInside" id="Ho1-d8-z0H"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dd3-6e-itp">
+                                                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dd3-6e-itp">
                                                                 <rect key="frame" x="297" y="0.0" width="81" height="81"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="filled" title="-" cornerStyle="large">
                                                                     <fontDescription key="titleFontDescription" name="Jost-Regular" family="Jost" pointSize="24"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="operationButtons:" destination="odv-f9-NU6" eventType="touchUpInside" id="sHN-xV-NN3"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="f7E-sM-gUE">
                                                         <rect key="frame" x="0.0" y="296" width="378" height="80.5"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfG-79-r0U">
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfG-79-r0U">
                                                                 <rect key="frame" x="0.0" y="0.0" width="81" height="80.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="filled" title="1" cornerStyle="large">
                                                                     <fontDescription key="titleFontDescription" name="Jost-Regular" family="Jost" pointSize="24"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="buttonPressed:" destination="odv-f9-NU6" eventType="touchUpInside" id="mLs-cP-Yis"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deC-iO-mUs">
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deC-iO-mUs">
                                                                 <rect key="frame" x="99" y="0.0" width="81" height="80.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="filled" title="2" cornerStyle="large">
                                                                     <fontDescription key="titleFontDescription" name="Jost-Regular" family="Jost" pointSize="24"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="buttonPressed:" destination="odv-f9-NU6" eventType="touchUpInside" id="pNM-hG-X2w"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iky-Sc-GsI">
+                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iky-Sc-GsI">
                                                                 <rect key="frame" x="198" y="0.0" width="81" height="80.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="filled" title="3" cornerStyle="large">
                                                                     <fontDescription key="titleFontDescription" name="Jost-Regular" family="Jost" pointSize="24"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="buttonPressed:" destination="odv-f9-NU6" eventType="touchUpInside" id="vAe-SY-hAv"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKg-ai-d4J">
+                                                            <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKg-ai-d4J">
                                                                 <rect key="frame" x="297" y="0.0" width="81" height="80.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="filled" title="+" cornerStyle="large">
                                                                     <fontDescription key="titleFontDescription" name="Jost-Regular" family="Jost" pointSize="24"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="operationButtons:" destination="odv-f9-NU6" eventType="touchUpInside" id="v0h-M6-YKo"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -208,36 +259,44 @@
                                                         <rect key="frame" x="0.0" y="394.5" width="378" height="80.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXG-NV-M38">
-                                                                <rect key="frame" x="0.0" y="0.0" width="179" height="80.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="181" height="80.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="filled" title="0" cornerStyle="large">
                                                                     <fontDescription key="titleFontDescription" name="Jost-Regular" family="Jost" pointSize="24"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="buttonPressed:" destination="odv-f9-NU6" eventType="touchUpInside" id="pi0-jI-DLy"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yr2-yV-WnN">
-                                                                <rect key="frame" x="197" y="0.0" width="81.5" height="80.5"/>
+                                                            <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yr2-yV-WnN">
+                                                                <rect key="frame" x="199" y="0.0" width="80.5" height="80.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="filled" title="." cornerStyle="large">
                                                                     <fontDescription key="titleFontDescription" name="Jost-Regular" family="Jost" pointSize="24"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="operationButtons:" destination="odv-f9-NU6" eventType="touchUpInside" id="oWP-vt-UXK"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KcO-XS-53j">
-                                                                <rect key="frame" x="296.5" y="0.0" width="81.5" height="80.5"/>
+                                                            <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KcO-XS-53j">
+                                                                <rect key="frame" x="297.5" y="0.0" width="80.5" height="80.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="filled" title="=" cornerStyle="large">
                                                                     <fontDescription key="titleFontDescription" name="Jost-Regular" family="Jost" pointSize="24"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="operationButtons:" destination="odv-f9-NU6" eventType="touchUpInside" id="QjD-hX-EOU"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
                                                             <constraint firstItem="Yr2-yV-WnN" firstAttribute="width" secondItem="KcO-XS-53j" secondAttribute="width" id="ZwT-jL-8fT"/>
-                                                            <constraint firstItem="SXG-NV-M38" firstAttribute="width" secondItem="Yr2-yV-WnN" secondAttribute="width" multiplier="2.2" id="lEz-Dn-ntW"/>
+                                                            <constraint firstItem="SXG-NV-M38" firstAttribute="width" secondItem="Yr2-yV-WnN" secondAttribute="width" multiplier="2.25" id="lEz-Dn-ntW"/>
                                                         </constraints>
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="51P-kF-35N" secondAttribute="trailing" constant="18" id="Ak6-LO-gKj"/>
                                             <constraint firstItem="51P-kF-35N" firstAttribute="leading" secondItem="XrW-vF-3D5" secondAttribute="leading" constant="18" id="fBw-Sl-gYl"/>
@@ -246,7 +305,6 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.1356665906" green="0.86096045509999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="XrW-vF-3D5" firstAttribute="height" secondItem="KW1-zh-XqQ" secondAttribute="height" multiplier="0.65" id="M89-aX-XYx"/>
                                 </constraints>
@@ -262,6 +320,29 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uGc-0E-OnS"/>
+                    <connections>
+                        <outlet property="currentOperation" destination="1Gu-qd-Q9v" id="ZOs-Pa-693"/>
+                        <outlet property="resultLabel" destination="lrw-ko-Hg9" id="sPK-62-qqf"/>
+                        <outletCollection property="calculatorButtons" destination="TBn-Tc-ntC" collectionClass="NSMutableArray" id="aqO-0e-um7"/>
+                        <outletCollection property="calculatorButtons" destination="sm0-AQ-fXz" collectionClass="NSMutableArray" id="JLw-su-dcd"/>
+                        <outletCollection property="calculatorButtons" destination="mV0-RG-3eG" collectionClass="NSMutableArray" id="qKp-E3-vav"/>
+                        <outletCollection property="calculatorButtons" destination="JtX-E6-bRx" collectionClass="NSMutableArray" id="eDq-tu-t10"/>
+                        <outletCollection property="calculatorButtons" destination="xyA-Kv-9Un" collectionClass="NSMutableArray" id="KFk-56-P2K"/>
+                        <outletCollection property="calculatorButtons" destination="Lkd-jT-ZeS" collectionClass="NSMutableArray" id="Qn3-4k-PZ4"/>
+                        <outletCollection property="calculatorButtons" destination="JcN-Qt-pfd" collectionClass="NSMutableArray" id="lwL-Dv-Qil"/>
+                        <outletCollection property="calculatorButtons" destination="XMG-hl-0Mi" collectionClass="NSMutableArray" id="p81-ul-npP"/>
+                        <outletCollection property="calculatorButtons" destination="dd3-6e-itp" collectionClass="NSMutableArray" id="T4Y-DH-pDB"/>
+                        <outletCollection property="calculatorButtons" destination="GPt-6r-LGI" collectionClass="NSMutableArray" id="XI8-sP-kgw"/>
+                        <outletCollection property="calculatorButtons" destination="oyc-49-3qR" collectionClass="NSMutableArray" id="PWT-Rh-mI4"/>
+                        <outletCollection property="calculatorButtons" destination="vef-MT-uG4" collectionClass="NSMutableArray" id="Jai-kC-FSD"/>
+                        <outletCollection property="calculatorButtons" destination="oKg-ai-d4J" collectionClass="NSMutableArray" id="sOI-a1-qQO"/>
+                        <outletCollection property="calculatorButtons" destination="Iky-Sc-GsI" collectionClass="NSMutableArray" id="FRL-4b-dDI"/>
+                        <outletCollection property="calculatorButtons" destination="deC-iO-mUs" collectionClass="NSMutableArray" id="wHd-Ft-y7t"/>
+                        <outletCollection property="calculatorButtons" destination="GfG-79-r0U" collectionClass="NSMutableArray" id="VKQ-Zd-VV8"/>
+                        <outletCollection property="calculatorButtons" destination="SXG-NV-M38" collectionClass="NSMutableArray" id="vtn-0K-P0R"/>
+                        <outletCollection property="calculatorButtons" destination="Yr2-yV-WnN" collectionClass="NSMutableArray" id="zIg-VM-cLb"/>
+                        <outletCollection property="calculatorButtons" destination="KcO-XS-53j" collectionClass="NSMutableArray" id="QH0-s9-4Ee"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TYk-mq-hsN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -271,9 +352,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
