@@ -46,8 +46,9 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F10-ut-HXj">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="271"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrw-ko-Hg9">
-                                                <rect key="frame" x="8" y="158.5" width="398" height="104.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lrw-ko-Hg9">
+                                                <rect key="frame" x="87" y="158" width="319" height="105"/>
+                                                <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" name="Jost-Regular" family="Jost" pointSize="72"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -58,14 +59,24 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ta-wh-dwb">
+                                                <rect key="frame" x="31" y="195" width="48" height="31"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="delete.right.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="erase:" destination="odv-f9-NU6" eventType="touchUpInside" id="tJl-MB-3UW"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="lrw-ko-Hg9" secondAttribute="bottom" constant="8" id="0Bl-Zk-WoA"/>
+                                            <constraint firstItem="lrw-ko-Hg9" firstAttribute="leading" secondItem="3ta-wh-dwb" secondAttribute="trailing" constant="8" id="1qv-wJ-C9K"/>
+                                            <constraint firstItem="3ta-wh-dwb" firstAttribute="leading" secondItem="F10-ut-HXj" secondAttribute="leading" constant="31" id="G6v-UP-0gY"/>
                                             <constraint firstItem="1Gu-qd-Q9v" firstAttribute="leading" secondItem="F10-ut-HXj" secondAttribute="leading" constant="8" id="ICX-e3-2sK"/>
                                             <constraint firstAttribute="trailing" secondItem="1Gu-qd-Q9v" secondAttribute="trailing" constant="8" id="K3t-cq-dFs"/>
-                                            <constraint firstItem="lrw-ko-Hg9" firstAttribute="leading" secondItem="F10-ut-HXj" secondAttribute="leading" constant="8" id="QyV-qM-h3m"/>
+                                            <constraint firstAttribute="bottom" secondItem="3ta-wh-dwb" secondAttribute="bottom" constant="45" id="Qrh-4m-lTt"/>
                                             <constraint firstAttribute="trailing" secondItem="lrw-ko-Hg9" secondAttribute="trailing" constant="8" id="hsR-fh-lTn"/>
                                             <constraint firstAttribute="bottom" secondItem="1Gu-qd-Q9v" secondAttribute="bottom" constant="120.5" id="nZf-NZ-X0t"/>
+                                            <constraint firstItem="3ta-wh-dwb" firstAttribute="centerY" secondItem="lrw-ko-Hg9" secondAttribute="centerY" id="seu-7k-lHM"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XrW-vF-3D5">
@@ -306,7 +317,9 @@
                                     </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="3ta-wh-dwb" firstAttribute="width" secondItem="TBn-Tc-ntC" secondAttribute="width" multiplier="0.592593" id="BF9-Au-w7b"/>
                                     <constraint firstItem="XrW-vF-3D5" firstAttribute="height" secondItem="KW1-zh-XqQ" secondAttribute="height" multiplier="0.65" id="M89-aX-XYx"/>
+                                    <constraint firstItem="3ta-wh-dwb" firstAttribute="height" secondItem="TBn-Tc-ntC" secondAttribute="height" multiplier="0.385093" id="X6g-5l-pYl"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -322,6 +335,7 @@
                     <navigationItem key="navigationItem" id="uGc-0E-OnS"/>
                     <connections>
                         <outlet property="currentOperation" destination="1Gu-qd-Q9v" id="ZOs-Pa-693"/>
+                        <outlet property="eraseButton" destination="3ta-wh-dwb" id="QGw-us-Xer"/>
                         <outlet property="resultLabel" destination="lrw-ko-Hg9" id="sPK-62-qqf"/>
                         <outletCollection property="calculatorButtons" destination="TBn-Tc-ntC" collectionClass="NSMutableArray" id="aqO-0e-um7"/>
                         <outletCollection property="calculatorButtons" destination="sm0-AQ-fXz" collectionClass="NSMutableArray" id="JLw-su-dcd"/>
@@ -350,6 +364,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="delete.right.fill" catalog="system" width="128" height="104"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

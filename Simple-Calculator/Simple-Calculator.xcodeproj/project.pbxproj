@@ -37,6 +37,8 @@
 		7585E8AC28C9E54400416E85 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7585E89628C9E54400416E85 /* README.txt */; };
 		7585E8AF28C9EA2C00416E85 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7585E8AE28C9EA2C00416E85 /* Theme.swift */; };
 		7585E8B128CA602400416E85 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7585E8B028CA602400416E85 /* .gitignore */; };
+		75ACA65428CBB683008063CF /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75ACA65328CBB683008063CF /* HistoryViewController.swift */; };
+		75ACA65628CBC1A4008063CF /* HistoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75ACA65528CBC1A4008063CF /* HistoryData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +74,8 @@
 		7585E89628C9E54400416E85 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		7585E8AE28C9EA2C00416E85 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		7585E8B028CA602400416E85 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		75ACA65328CBB683008063CF /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		75ACA65528CBC1A4008063CF /* HistoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,8 @@
 				7585E86828C9E00E00416E85 /* AppDelegate.swift */,
 				7585E86A28C9E00E00416E85 /* SceneDelegate.swift */,
 				7585E86C28C9E00E00416E85 /* ViewController.swift */,
+				75ACA65328CBB683008063CF /* HistoryViewController.swift */,
+				75ACA65528CBC1A4008063CF /* HistoryData.swift */,
 				7585E86E28C9E00E00416E85 /* Main.storyboard */,
 				7585E87128C9E01000416E85 /* Assets.xcassets */,
 				7585E87328C9E01000416E85 /* LaunchScreen.storyboard */,
@@ -251,7 +257,9 @@
 			files = (
 				7585E86D28C9E00E00416E85 /* ViewController.swift in Sources */,
 				7585E8AF28C9EA2C00416E85 /* Theme.swift in Sources */,
+				75ACA65628CBC1A4008063CF /* HistoryData.swift in Sources */,
 				7585E86928C9E00E00416E85 /* AppDelegate.swift in Sources */,
+				75ACA65428CBB683008063CF /* HistoryViewController.swift in Sources */,
 				7585E86B28C9E00E00416E85 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
